@@ -10,6 +10,9 @@ export GREP_OPTIONS='--color=auto'
 # Prevent less from clearing the screen while still showing colors.
 export LESS=-XR
 
+# Don’t clear the screen after quitting a manual page.
+export MANPAGER='less -X';
+
 # Set the terminal's title bar.
 function titlebar() {
   echo -n $'\e]0;'"$*"$'\a'
