@@ -22,7 +22,7 @@ sudo scutil --set LocalHostName "mbpr-dev"
 #sudo pmset -a standbydelay 86400
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+# sudo nvram SystemAudioVolume=" "
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
 # defaults write com.apple.universalaccess reduceTransparency -bool true
@@ -254,7 +254,7 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 # Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -658,7 +658,7 @@ defaults write com.apple.terminal FocusFollowsMouse -bool true
 
 # Install the Solarized Dark theme for iTerm
 # start_if_needed iTerm
-open "${HOME}/init/Solarized Dark-Custom.itermcolors"
+# open "${HOME}/init/Solarized Dark-Custom.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -691,7 +691,7 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 # Speed up update frequency
-defaults write com.apple.ActivityMonitor UpdatePeriod -int 2
+defaults write com.apple.ActivityMonitor UpdatePeriod -int 1
 
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
