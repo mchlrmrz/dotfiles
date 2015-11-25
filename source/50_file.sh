@@ -1,8 +1,3 @@
-# Files will be created with these permissions:
-# files 644 -rw-r--r-- (666 minus 022)
-# dirs  755 drwxr-xr-x (777 minus 022)
-umask 022
-
 # Always use color output for `ls`
 if is_osx; then
   alias ls="command ls -G"
@@ -39,9 +34,3 @@ alias eachdir=". eachdir"
 function md() {
   mkdir -p "$@" && cd "$@"
 }
-
-# Fast directory switching
-mkdir -p $DOTFILES/caches/z
-_Z_NO_PROMPT_COMMAND=1
-_Z_DATA=$DOTFILES/caches/z/z
-. $DOTFILES/vendor/z/z.sh
