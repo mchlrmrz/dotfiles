@@ -34,6 +34,9 @@ pip install virtualenvwrapper
 pip3 install virtualenv
 pip3 install virtualenvwrapper
 
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
 # e_header "Setting up py2-data virtual environment."
 
 # Create a Python2 data environment
