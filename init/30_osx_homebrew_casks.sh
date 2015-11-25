@@ -5,7 +5,7 @@ is_osx || return 1
 [[ ! "$(type -P brew)" ]] && e_error "Brew casks need Homebrew to install." && return 1
 
 # Ensure the cask keg and recipe are installed.
-kegs=(caskroom/cask)
+kegs=(caskroom/cask homebrew/versions caskroom/fonts homebrew/completions caskroom/versions)
 brew_tap_kegs
 recipes=(brew-cask)
 brew_install_recipes
@@ -20,57 +20,22 @@ brew cask info this-is-somewhat-annoying 2>/dev/null
 casks=(
   # Applications
   1password
-  a-better-finder-rename
-  aluxian-messenger
-  battle-net
+  alfred
+  bartender
   bettertouchtool
-  charles
-  chromium
-  chronosync
-  dropbox
-  duet
-  easysimbl
-  fastscripts
-  firefox
-  google-chrome
-  gyazo
-  hermes
-  hex-fiend
-  iterm2
-  karabiner
-  launchbar
-  macvim
-  menumeters
-  midi-monitor
+  calibre
+  dash
+  dropbox-experimental
+  google-chrome-beta
+  iterm2-beta
   moom
-  omnidisksweeper
-  race-for-the-galaxy
-  reaper
-  remote-desktop-connection
-  scroll-reverser
-  seil
-  sharemouse
-  skype
-  slack
-  sonos
-  sourcetree
-  spotify
-  star-realms
-  steam
-  synology-assistant
-  teamspeak-client
-  teamviewer
+  sublime-text3
+  textexpander
   the-unarchiver
-  todoist
-  totalfinder
   tower
-  transmission-remote-gui
-  vagrant
-  virtualbox
+  transmission
   vlc
-  ynab
-  # Drivers
-  d235j-xbox360-controller-driver
+  wd-my-cloud
   # Quick Look plugins
   betterzipql
   qlcolorcode
@@ -82,9 +47,13 @@ casks=(
   quicknfo
   suspicious-package
   webpquicklook
-  # Color pickers
-  colorpicker-developer
-  colorpicker-skalacolor
+  # Completions
+  brew-cask-completion
+  # Fonts
+  font-inconsolata
+  font-source-code-pro
+  font-droid-sans-mono
+  font-dejavu-sans
 )
 
 # Install Homebrew casks.
@@ -92,24 +61,7 @@ casks=($(setdiff "${casks[*]}" "$(brew cask list 2>/dev/null)"))
 if (( ${#casks[@]} > 0 )); then
   e_header "Installing Homebrew casks: ${casks[*]}"
   for cask in "${casks[@]}"; do
-    brew cask install $cask
+    brew cask install --appdir="/Applications" $cask
   done
   brew cask cleanup
-fi
-
-# Work around colorPicker symlink issue.
-# https://github.com/caskroom/homebrew-cask/issues/7004
-cps=()
-for f in ~/Library/ColorPickers/*.colorPicker; do
-  [[ -L "$f" ]] && cps=("${cps[@]}" "$f")
-done
-
-if (( ${#cps[@]} > 0 )); then
-  e_header "Fixing colorPicker symlinks"
-  for f in "${cps[@]}"; do
-    target="$(readlink "$f")"
-    e_arrow "$(basename "$f")"
-    rm "$f"
-    cp -R "$target" ~/Library/ColorPickers/
-  done
 fi
