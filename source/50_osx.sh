@@ -10,3 +10,6 @@ alias c="tr -d '\n' | pbcopy"
 
 # Specify your defaults in this environment variable
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Set architecture flags
+export ARCHFLAGS="-arch x86_64"

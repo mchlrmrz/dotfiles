@@ -17,9 +17,9 @@ sudo -K
 [[ ! "$(type -P pip)" ]] && e_error "Python needs Pip  to setup environment." && return 1
 
 # Upgrade some tools
-e_header "Updating Pip and Setuptools."
-pip install --upgrade setuptools
-pip install --upgrade pip
+# e_header "Updating Pip and Setuptools."
+# pip install --upgrade setuptools
+# pip install --upgrade pip
 
 # Exit if Pip3 is not installed.
 [[ ! "$(type -P pip3)" ]] && e_error "Python needs Pip  to setup environment." && return 1
@@ -29,13 +29,15 @@ pip3 install --upgrade setuptools
 pip3 install --upgrade pip
 
 # Install virtual environments globally
-pip install virtualenv
-pip install virtualenvwrapper
+# pip install virtualenv
+# pip install virtualenvwrapper
 pip3 install virtualenv
 pip3 install virtualenvwrapper
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
 # e_header "Setting up py2-data virtual environment."
 
