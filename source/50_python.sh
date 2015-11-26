@@ -11,4 +11,4 @@ fi
 # export PIP_REQUIRE_VIRTUALENV=true
 
 # set paths to python & directories
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
