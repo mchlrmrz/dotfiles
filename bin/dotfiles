@@ -258,7 +258,7 @@ function do_stuff() {
 
 # Enough with the functions, let's do stuff.
 
-export prompt_delay=30
+export prompt_delay=5
 
 # Ensure that we can actually, like, compile anything.
 if [[ ! "$(type -P gcc)" ]] && is_osx; then
@@ -283,7 +283,7 @@ fi
 if [[ ! -d $DOTFILES ]]; then
   # $DOTFILES directory doesn't exist? Clone it!
   new_dotfiles_install=1
-  prompt_delay=30
+  prompt_delay=5
   e_header "Downloading dotfiles"
   git clone --recursive git://github.com/${github_user:-mchlrmrz}/dotfiles.git $DOTFILES
   cd $DOTFILES
