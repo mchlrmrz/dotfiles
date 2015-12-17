@@ -22,9 +22,6 @@ recipes=(
   tree
   webkit2png
   wget
-  # Python
-  python
-  python3
 )
 
 brew_install_recipes

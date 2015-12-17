@@ -34,7 +34,6 @@ casks=(
   keyboard-maestro
   moom
   onyx
-  spillo
   sublime-text3
   textexpander
   the-unarchiver
