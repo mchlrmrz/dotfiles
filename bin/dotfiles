@@ -219,6 +219,27 @@ function link_do() {
   ln -sf ${2#$HOME/} ~/
 }
 
+# Write preferences.
+function prefs_import_header() { e_header "Importing preferences"; }
+function import_prefs() {
+  e_success "Importing preferences for ~/$1."
+  defaults import "$1" "$2"
+}
+
+# Read preferences.
+function prefs_read_header() { e_header "Reading preferences"; }
+function read_prefs() {
+  e_success "Reading preferences for ~/$1."
+  defaults read "$1"
+}
+
+# Export preferences.
+function export_prefs() {
+  e_success "Exporting preferences for ~/$1."
+  defaults export "$1" "$2"
+}
+
+
 # Copy, link, init, etc.
 function do_stuff() {
   local base dest skip
@@ -258,7 +279,7 @@ function do_stuff() {
 
 # Enough with the functions, let's do stuff.
 
-export prompt_delay=5
+export prompt_delay=10
 
 # Ensure that we can actually, like, compile anything.
 if [[ ! "$(type -P gcc)" ]] && is_osx; then

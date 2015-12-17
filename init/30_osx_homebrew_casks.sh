@@ -24,11 +24,17 @@ casks=(
   bartender
   bettertouchtool
   calibre
+  cheatsheet
   dash
   dropbox-experimental
+  freeze
   google-chrome-beta
   iterm2-beta
+  jdownloader
+  keyboard-maestro
   moom
+  onyx
+  spillo
   sublime-text3
   textexpander
   the-unarchiver
@@ -36,7 +42,7 @@ casks=(
   transmission
   vlc
   wd-my-cloud
-  # Quick Look plugins
+  # Quicklook Plugins
   betterzipql
   qlcolorcode
   qlmarkdown
@@ -45,15 +51,12 @@ casks=(
   quicklook-csv
   quicklook-json
   quicknfo
-  suspicious-package
   webpquicklook
-  # Completions
-  brew-cask-completion
   # Fonts
+  font-dejavu-sans
+  font-droid-sans-mono
   font-inconsolata
   font-source-code-pro
-  font-droid-sans-mono
-  font-dejavu-sans
 )
 
 # Install Homebrew casks.

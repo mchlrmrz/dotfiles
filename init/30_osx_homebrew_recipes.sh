@@ -7,6 +7,9 @@ is_osx || return 1
 # Homebrew recipes
 recipes=(
   bash
+  bash-completion2
+  brew-cask
+  brew-cask-completion
   coreutils
   findutils
   git
@@ -14,11 +17,11 @@ recipes=(
   moreutils
   pv
   rename
+  rsync
   ssh-copy-id
   tree
   webkit2png
   wget
-  bash-completion2
   # Python
   python
   python3
