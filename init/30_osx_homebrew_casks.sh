@@ -26,7 +26,7 @@ casks=(
   calibre
   cheatsheet
   dash
-  dropbox-experimental
+  dropbox
   freeze
   google-chrome-beta
   iterm2-beta
