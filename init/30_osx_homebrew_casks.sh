@@ -19,15 +19,11 @@ brew cask info this-is-somewhat-annoying 2>/dev/null
 # Homebrew casks
 casks=(
   # Applications
-  1password
-  alfred
+  1password-beta
   bartender
   bettertouchtool
-  calibre
-  cheatsheet
   dash
   dropbox
-  freeze
   google-chrome-beta
   iterm2-beta
   jdownloader
