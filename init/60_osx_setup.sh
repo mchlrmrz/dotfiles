@@ -99,7 +99,7 @@ sudo mdutil -E / > /dev/null
 hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 # Install Sublime Text settings
-ditto init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings 2> /dev/null
+ditto conf/osx/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings 2> /dev/null
 
 for app in "Activity Monitor" "cfprefsd" \
     "Dock" "Finder" "Messages" \
