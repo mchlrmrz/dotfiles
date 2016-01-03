@@ -43,3 +43,5 @@
   cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [rerere]
   enabled = 1
+[credential]
+	helper = osxkeychain
