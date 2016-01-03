@@ -69,7 +69,7 @@ function prompt_menu() {
   exitcode=0
   if [[ "$2" ]]; then
     _prompt_menu_draws "$1"
-    read -t $2 -n 1 -sp "To edit this list, press any key within $2 seconds. "
+    read -n 1 -sp "To edit this list, press any key. "
     exitcode=$?
     echo ""
   fi 1>&2
@@ -150,6 +150,18 @@ function setdiff() {
     echo "$a ($(eval echo "\${#$a[*]}")) $(eval echo "\${$a[*]}")" 1>&2
   done
   [[ "$1" ]] && echo "${setdiffC[@]}"
+}
+
+# Test for Xcode Developer Tools
+function devtoolstest() {
+  local developer_dir
+  developer_dir="$(/usr/bin/xcode-select --print-path 2>/dev/null)"
+  [[ ! -d "$developer_dir" ]] && sudo xcode-select --install && pause 'Press any key when installation is complete.'
+}
+
+# Pause function
+function pause(){
+  read -p "$*"
 }
 
 # If this file was being sourced, exit now.
@@ -279,7 +291,10 @@ function do_stuff() {
 
 # Enough with the functions, let's do stuff.
 
-export prompt_delay=10
+export prompt_delay=30
+
+# Checking for Xcode Developer Tools and install if necessary.
+
 
 # Ensure that we can actually, like, compile anything.
 if [[ ! "$(type -P gcc)" ]] && is_osx; then
@@ -306,7 +321,7 @@ if [[ ! -d $DOTFILES ]]; then
   new_dotfiles_install=1
   prompt_delay=5
   e_header "Downloading dotfiles"
-  git clone --recursive git://github.com/${github_user:-mchlrmrz}/dotfiles.git $DOTFILES
+  git clone --recursive https://github.com/${github_user:-mchlrmrz}/dotfiles.git $DOTFILES
   cd $DOTFILES
 elif [[ "$1" != "restart" ]]; then
   # Make sure we have the latest files.
