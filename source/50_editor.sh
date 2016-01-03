@@ -8,4 +8,4 @@ fi
 
 export VISUAL="$EDITOR"
 alias q="$EDITOR"
-alias qs="q $DOTFILES"
+alias qd="q $DOTFILES"
