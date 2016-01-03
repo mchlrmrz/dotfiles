@@ -50,3 +50,7 @@ function tre() {
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# Show/hide LaunchBar dock icon
+alias showlaunch="defaults write at.obdev.LaunchBar ShowDockIcon -bool true && killall LaunchBar && sleep 1 && open -a LaunchBar"
+alias hidelaunch="defaults write at.obdev.LaunchBar ShowDockIcon -bool false && killall LaunchBar && sleep 1 && open -a LaunchBar"
