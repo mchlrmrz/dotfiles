@@ -8,7 +8,6 @@ is_osx || return 1
 recipes=(
   bash
   bash-completion2
-  brew-cask
   brew-cask-completion
   coreutils
   findutils
