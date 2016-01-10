@@ -38,9 +38,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "MacBook Pro"
-#sudo scutil --set HostName "0x6D746873"
-sudo scutil --set LocalHostName "MacBook Pro"
+sudo scutil --set ComputerName "MacBook-Pro"
+sudo scutil --set HostName "MacBook-Pro"
+sudo scutil --set LocalHostName "MacBook-Pro"
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "America/New_York" > /dev/null
