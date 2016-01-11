@@ -6,7 +6,7 @@ PATH=$DOTFILES/bin:$PATH
 export PATH
 
 # If Anaconda exists, add it to PATH
-[[ -d "/Users/$USER/anaconda3/bin" ]] && PATH="/Users/$USER/anaconda3/bin:$PATH" && export PATH
+[[ -d "/Users/$USER/.anaconda3/bin" ]] && PATH="/Users/$USER/.anaconda3/bin:$PATH" && export PATH
 
 # Maintain single Bash history file
 export PROMPT_COMMAND="history -a; history -n"
