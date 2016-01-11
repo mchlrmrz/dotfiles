@@ -11,6 +11,9 @@ export PATH
 # Maintain single Bash history file
 export PROMPT_COMMAND="history -a; history -n"
 
+# Activate awscli completions
+complete -C aws_completer aws
+
 # Source all files in "source"
 function src() {
   local file
