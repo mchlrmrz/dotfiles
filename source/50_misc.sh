@@ -24,7 +24,7 @@ if [[ -e ~/.ssh/known_hosts ]]; then
 fi
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup --force'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
@@ -54,3 +54,9 @@ alias reload="exec $SHELL -l"
 # Show/hide LaunchBar dock icon
 alias showlaunch="defaults write at.obdev.LaunchBar ShowDockIcon -bool true && killall LaunchBar && sleep 1 && open -a LaunchBar"
 alias hidelaunch="defaults write at.obdev.LaunchBar ShowDockIcon -bool false && killall LaunchBar && sleep 1 && open -a LaunchBar"
+
+# Brew aliases
+alias bls="brew list"
+alias bcls="brew cask list"
+alias bs="brew search"
+alias bcs="brew cask search"
