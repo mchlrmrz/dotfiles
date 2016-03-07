@@ -24,7 +24,7 @@ if [[ -e ~/.ssh/known_hosts ]]; then
 fi
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup --force'
+alias update='brew update; brew upgrade --all; brew cleanup --force'
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
