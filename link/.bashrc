@@ -12,7 +12,14 @@ export PATH
 export PROMPT_COMMAND="history -a; history -n"
 
 # Activate awscli completions
-complete -C aws_completer aws
+if [[ "$(type -P aws_completer)" ]]; then
+  complete -C aws_completer aws
+fi
+
+# Source Google Cloud SDK completions
+if [ -f '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc' ]; then
+    source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+fi
 
 # Source all files in "source"
 function src() {
