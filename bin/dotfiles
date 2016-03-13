@@ -326,8 +326,8 @@ elif [[ "$1" != "restart" ]]; then
 fi
 
 # Add binaries into the path
-[[ -d $DOTFILES/bin ]] && PATH=$DOTFILES/bin:$PATH
-export PATH
+# [[ -d $DOTFILES/bin ]] && PATH=$DOTFILES/bin:$PATH
+# export PATH
 
 # Tweak file globbing.
 shopt -s dotglob
