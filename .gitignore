@@ -9,6 +9,7 @@
 /link/.ssh/known_hosts
 /link/.pgpass
 /link/.pg_service.conf
+/source/50_postgresql.sh
 
 # Don't commit Vim plugins, vim-plug will install them.
 /link/.vim/plugged
@@ -20,3 +21,4 @@
 
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
+
