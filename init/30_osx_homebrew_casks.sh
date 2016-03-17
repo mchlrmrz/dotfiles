@@ -18,14 +18,18 @@ casks=(
   # Applications
   1password-beta
   alfred
+  arq
   bartender
   bettertouchtool
+  cyberduck
   dash
   dropbox
   google-chrome-beta
+  hazel
   iterm2-beta
   jdownloader
   keyboard-maestro
+  kindle
   moom
   onyx
   sublime-text3
@@ -46,10 +50,10 @@ casks=(
   quicknfo
   webpquicklook
   # Fonts
-  font-dejavu-sans
-  font-droid-sans-mono
-  font-inconsolata
-  font-source-code-pro
+  # font-dejavu-sans
+  # font-droid-sans-mono
+  # font-inconsolata
+  # font-source-code-pro
 )
 
 # Install Homebrew casks.

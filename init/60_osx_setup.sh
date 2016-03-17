@@ -70,7 +70,7 @@ import_preferences com.pilotmoon.popclip "$pref_folder/"com.pilotmoon.popclip.pl
 import_preferences com.smileonmymac.textexpander "$pref_folder/"com.smileonmymac.textexpander.plist
 import_preferences com.surteesstudios.Bartender "$pref_folder/"com.surteesstudios.Bartender.plist
 import_preferences org.m0k.transmission "$pref_folder/"org.m0k.transmission.plist
-import_preferences at.obdev.LaunchBar "$pref_folder/"at.obdev.LaunchBar.plist
+# import_preferences at.obdev.LaunchBar "$pref_folder/"at.obdev.LaunchBar.plist
 import_preferences cx.c3.theunarchiver "$pref_folder/"cx.c3.theunarchiver.plist
 
 # Disable local Time Machine snapshots

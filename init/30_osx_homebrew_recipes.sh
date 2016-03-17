@@ -6,6 +6,7 @@ is_osx || return 1
 
 # Homebrew recipes
 recipes=(
+  awscli
   bash
   bash-completion2
   coreutils
