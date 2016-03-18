@@ -16,7 +16,7 @@ brew_tap_kegs
 # Homebrew casks
 casks=(
   # Applications
-  1password-beta
+  # 1password-beta
   alfred
   arq
   bartender
